@@ -1,4 +1,4 @@
-package com.fbs.apis;
+package com.fbs.util;
 
 import java.io.BufferedReader;
 import java.io.File;

@@ -1,4 +1,4 @@
-package com.fbs.apis;
+package com.fbs.util;
 
 public class FileElement {
 }
