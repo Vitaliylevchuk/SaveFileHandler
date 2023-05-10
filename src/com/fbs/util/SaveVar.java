@@ -5,12 +5,19 @@ public class SaveVar {
     private static String name;
     private static String value;
 
+    public SaveVar(){}
+
+    public SaveVar(String name, String value){
+        this.name = name;
+        this.value = value;
+    }
+
     public void setName(String name) {
-        SaveVar.name = name;
+        this.name = name;
     }
 
     public void setValue(String value) {
-        SaveVar.value = value;
+        this.value = value;
     }
 
     public String getName() {

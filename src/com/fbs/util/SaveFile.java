@@ -15,11 +15,10 @@ public class SaveFile {
         return filePath;
     }
 
-
-
     public SaveFile(File file){
         this.file = file;
         this.filePath = file.getAbsolutePath();
+
     }
 
     public SaveFile(String filePath){
