@@ -24,7 +24,7 @@ public class VarName extends FileElement implements SaveFileDefault{
 
         StringBuilder returnName = new StringBuilder();
 
-        String targetLine = lineGetter.readFromLine(lineId, file.getFile());
+        String targetLine = lineGetter.readFromLine(lineId, file.getFilePath());
         char[] targetLineCh = targetLine.toCharArray();
 
         boolean reading = false;

@@ -11,8 +11,7 @@ public class SaveVarCreator {
     private static SaveVar saveVar;
 
     public SaveVarCreator(VarName varName, VarValue varValue){
-        this.varName = varName;
-        this.varValue = varValue;
+        saveVar = new SaveVar();
         this.saveVar.setName(varName.getData());
         this.saveVar.setValue(varValue.getData());
     }

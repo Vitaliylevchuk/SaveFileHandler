@@ -27,7 +27,7 @@ public class VarValue implements SaveFileDefault{
 
         StringBuilder returnValue = new StringBuilder();
 
-        String targetLine = lineGetter.readFromLine(lineId, file.getFile());
+        String targetLine = lineGetter.readFromLine(lineId, file.getFilePath());
         char[] targetLineCh = targetLine.toCharArray();
 
         boolean reading = false;
