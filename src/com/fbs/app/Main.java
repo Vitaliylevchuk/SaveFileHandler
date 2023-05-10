@@ -8,5 +8,6 @@ public class Main {
     public static void main(String[] args) throws NoSuchAlgorithmException {
         SaveFileHandler saveFileHandler = new SaveFileHandler(new File("/home/vitaliy/test.txt"), '\"', '\"', '=', 0);
         System.out.println(saveFileHandler.getSaveVar().getName());
+        System.out.println(saveFileHandler.getSaveVar().getValue());
     }
 }

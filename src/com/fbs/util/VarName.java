@@ -25,20 +25,26 @@ public class VarName extends FileElement implements SaveFileDefault{
         StringBuilder returnName = new StringBuilder();
 
         String targetLine = lineGetter.readFromLine(lineId, file.getFilePath());
-        char[] targetLineCh = targetLine.toCharArray();
+        System.out.println(targetLine);
+        char[] targetLineCh;
+        try {
+            targetLineCh = targetLine.toCharArray();
+        }catch (NullPointerException e){
+            targetLineCh = "Error".toCharArray();
+        }
 
         boolean reading = false;
         for (int i = 0; i < targetLineCh.length; i++) {
 
+            if ((stopReadSymbol == targetLineCh[i]) && reading) {
+                reading = false;
+                break;
+            }
             if (startReadSymbol == targetLineCh[i]){
                 reading = true;
             }
             else if (!(stopReadSymbol == targetLineCh[i]) && !(startReadSymbol == targetLineCh[i]) && reading) {
                 returnName.append(targetLineCh[i]);
-            }
-            else if ((stopReadSymbol == targetLineCh[i]) && reading) {
-                reading = false;
-                break;
             }
 
         }

@@ -13,19 +13,28 @@ public class LineGetter {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(filePath));
             String line = reader.readLine();
+            System.out.println(line);
             int i = 0;
             while (reader.ready()) {
+                System.out.println(i);
                 line = reader.readLine();
                 if (i == lineId){
                     returnString = line;
+                    System.out.println("if access");
+                    break;
+                }
+                i ++;
+                if(i>50){
                     break;
                 }
             }
 
             reader.close();
+            return line;
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("fdg");
         return returnString;
     }
 
