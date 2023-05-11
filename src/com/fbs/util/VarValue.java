@@ -28,7 +28,6 @@ public class VarValue implements SaveFileDefault{
         StringBuilder returnValue = new StringBuilder();
 
         String targetLine = lineGetter.readFromLine(lineId, file.getFilePath());
-        System.out.println(targetLine);
         char[] targetLineCh;
         try {
             targetLineCh = targetLine.toCharArray();
@@ -41,20 +40,19 @@ public class VarValue implements SaveFileDefault{
 
         for (int i = 0; i < targetLineCh.length; i++) {
 
-            if ((stopReadSymbol == targetLineCh[i]) && reading && equalitySymbolB) {
-                reading = false;
-                break;
+            if (!(stopReadSymbol == targetLineCh[i]) && !(startReadSymbol == targetLineCh[i]) && reading && equalitySymbolB) {
+                returnValue.append(targetLineCh[i]);
             }
             if (equalitySymbol == targetLineCh[i]){
                 equalitySymbolB = true;
             }
-            if (startReadSymbol == targetLineCh[i]){
+            else if ((stopReadSymbol == targetLineCh[i]) && reading && equalitySymbolB) {
+                reading = false;
+                break;
+            }
+            if (startReadSymbol == targetLineCh[i] && equalitySymbolB){
                 reading = true;
             }
-            if (!(stopReadSymbol == targetLineCh[i]) && !(startReadSymbol == targetLineCh[i]) && reading && equalitySymbolB) {
-                returnValue.append(targetLineCh[i]);
-            }
-
 
         }
 
