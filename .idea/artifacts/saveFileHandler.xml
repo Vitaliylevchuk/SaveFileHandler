@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="saveFileHandler">
-    <output-path>$PROJECT_DIR$/out/artifacts/saveFileHandler</output-path>
-    <root id="archive" name="saveFileHandler.jar">
-      <element id="module-output" name="SaveFileHandler" />
-    </root>
-  </artifact>
-</component>

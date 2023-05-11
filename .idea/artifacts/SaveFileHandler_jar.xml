@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="SaveFileHandler:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SaveFileHandler_jar</output-path>
+    <root id="archive" name="SaveFileHandler.jar">
+      <element id="module-output" name="SaveFileHandler" />
+    </root>
+  </artifact>
+</component>
